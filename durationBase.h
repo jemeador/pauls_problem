@@ -3,7 +3,7 @@
 template<typename EXT>
 class DurationBase {
   public:
-   DurationBase(int sec)
+   constexpr DurationBase(int sec)
     :sec_(sec)
   {
   }

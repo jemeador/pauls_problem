@@ -1,2 +1,2 @@
-paul_duration: main.cpp duration.cpp
-			 clang main.cpp duration.cpp --std=c++17 -lstdc++ -Wall -o paul_duration
+paul_duration: main.cpp
+			 clang main.cpp --std=c++17 -lstdc++ -Wall -o paul_duration

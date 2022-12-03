@@ -4,12 +4,23 @@
 
 class Seconds : public DurationBase<Seconds>{
   public:
-  constexpr explicit Seconds(int seconds);
-  static constexpr int Convert(int sec);
+  constexpr explicit Seconds(int seconds)
+    : DurationBase(seconds) {
+  }
+
+  static constexpr int Convert(int sec) {
+    return sec;
+  }
 };
 
 class Minutes : public DurationBase<Minutes>{
   public:
-  constexpr explicit Minutes(int minutes);
-  static constexpr int Convert(int sec);
+  constexpr Minutes(int minutes)
+    : DurationBase(minutes / 60) {
+  }
+
+  static constexpr int Convert(int sec) {
+    return sec * 60;
+  }
 };
+
